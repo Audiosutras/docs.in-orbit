@@ -22,17 +22,18 @@ const ProgressPage = () => {
            <Highlighter viewing={viewing} />
           </Col>
         </Row>
+        <p> click on one of the above animations for code examples.</p>
       </div>
       <div>
         <div>
-         <h1>API</h1>
+        <h1>API</h1>
         </div>
         <div>
-          <h2>ProgressIterator</h2>
+          <h2>ProgressIterator Component</h2>
           <Table />
         </div>
         <div>
-          <h2>Revolve</h2>
+          <h2>Animation Components</h2>
           <Table table="revolve" />
         </div>
       </div>
