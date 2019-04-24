@@ -37,7 +37,9 @@ const Header = () => {
       </Div>
       <div>
         <Row>
-          <Col span={21}></Col>
+          <Col span={21}>
+            <Paragraph> A react component library for rendering beautiful progress circle animations.</Paragraph>
+          </Col>
           <Col span={3}>
             <InstallDiv>
               <Paragraph>

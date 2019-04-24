@@ -155,6 +155,14 @@ const codeString = {
   };
   export default ProgressDisplay;
   `,
+  syntax: `import React from 'react';\n// import { ProgressIterator, Basic, Revolve, Hazard } from 'in-orbit';\nimport { ProgressIterator, Basic };\n const Component = () => {
+    return (
+      <ProgressIterator>
+        {({ percent }) => <Basic percent={percent} />}
+      </ProgressIterator>
+    );
+  };\n export default Component;
+  `
 };
 
 const Highlighter = ({ viewing }) => {
@@ -168,6 +176,7 @@ const Highlighter = ({ viewing }) => {
                 if (viewing === 'revolve') return codeString.revolve;
                 if (viewing === 'basic') return codeString.basic;
                 if (viewing === 'hazard') return codeString.hazard;
+                return codeString.syntax
               })()}
           </SyntaxHighlighter>
 };
