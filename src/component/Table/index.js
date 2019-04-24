@@ -98,7 +98,7 @@ const dataSource = {
       property: 'lg',
       description: 'pass prop to set to true, diameter is set to 40.',
       type: 'string',
-      component: ['Hazard', 'Revolve'],
+      component: ['Hazard', 'Revolve', 'Basic'],
       default: '(Optional)'
     },
     {
