@@ -1,6 +1,6 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/styles/prism';
+import { duotoneSea } from 'react-syntax-highlighter/dist/styles/prism';
 
 const codeString = {
   genesis: `import React from 'react';\nimport { ProgressIterator, Revolve } from 'in-orbit';
@@ -160,7 +160,7 @@ const codeString = {
 const Highlighter = ({ viewing }) => {
   return <SyntaxHighlighter
             language='javascript'
-            style={atomDark}
+            style={duotoneSea}
             wrapLines={true}
             >
               {(() => {
