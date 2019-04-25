@@ -1,8 +1,7 @@
 import React from 'react';
 import { Table, Tag } from 'antd';
 
-const dataSource = {
-  iterator: [
+const dataSource = [
     {
       key: '1',
       property: 'paginateArr',
@@ -18,11 +17,9 @@ const dataSource = {
       type: 'number',
       component: ['ProgressIterator'],
       default: '(Optional)'
-    }
-  ],
-  animation: [
+    },
     {
-      key: '1',
+      key: '3',
       property: 'percent',
       description: 'passed as a prop from ProgressIterator component',
       type: 'number',
@@ -30,7 +27,7 @@ const dataSource = {
       default: 'Required'
     },
     {
-      key: '2',
+      key: '4',
       property: 'diameter',
       description: `diameter of the outer circle to be created. Inner circle's diameter is proportional to the diameter set here.`,
       type: 'number',
@@ -38,7 +35,7 @@ const dataSource = {
       default: '30'
     },
     {
-      key: '3',
+      key: '5',
       property: 'strokeWidth',
       description: 'width of the stroke that revolves around each circle. Helps determine radius.',
       type: 'number',
@@ -46,7 +43,7 @@ const dataSource = {
       default: '2'
     },
     {
-      key: '4',
+      key: '6',
       property: 'color',
       description: 'color of the stroke',
       type: 'string',
@@ -54,7 +51,7 @@ const dataSource = {
       default: '#05F7EC',
     },
     {
-      key: '5',
+      key: '7',
       property: 'outlineColor',
       description: 'color of stationary circle',
       type: 'string',
@@ -62,7 +59,7 @@ const dataSource = {
       default: 'color prop'
     },
     {
-      key: '6',
+      key: '8',
       property: 'showOutline',
       description: 'pass prop to set to true. Stationary circle will be made visible.',
       type: 'boolean',
@@ -70,7 +67,7 @@ const dataSource = {
       default: 'false'
     },
     {
-      key: '7',
+      key: '9',
       property: 'sync',
       description: 'pass prop to set to true. Aligns the start of the animation with the top of the page.',
       type: 'boolean',
@@ -78,7 +75,7 @@ const dataSource = {
       default: 'false'
     },
     {
-      key: '8',
+      key: '10',
       property: 'genesis',
       description: 'pass prop to set to true, a special variation of the animation.',
       type: 'boolean',
@@ -86,7 +83,7 @@ const dataSource = {
       default: 'false'
     },
     {
-      key: '9',
+      key: '11',
       property: 'flash',
       description: 'pass prop to set to true, whether or not the inner circle will appear filled when animation is at 90% and 94% completed.',
       type: 'boolean',
@@ -94,7 +91,7 @@ const dataSource = {
       default: 'false'
     },
     {
-      key: '10',
+      key: '12',
       property: 'lg',
       description: 'pass prop to set to true, diameter is set to 40.',
       type: 'string',
@@ -102,15 +99,14 @@ const dataSource = {
       default: '(Optional)'
     },
     {
-      key: '11',
+      key: '13',
       property: 'strokeOpacity',
       description: 'used for setting the opacity of the animation.',
       type: 'Float (0 - 1)',
       component: ['Basic'],
       default: '0.7'
     }
-  ]
-}
+  ];
 
 const columns = [
   {
@@ -155,10 +151,7 @@ const columns = [
 
 const apiTable = ({ table }) => {
   return <Table
-  dataSource={(() => {
-    if (table === 'revolve' || table === 'hazard' || table === 'genesis' || table === 'basic') return dataSource.animation;
-    return dataSource.iterator;
-  })()}
+  dataSource={dataSource}
   columns={columns}
   pagination={false}
   />

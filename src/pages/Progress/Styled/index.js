@@ -10,4 +10,12 @@ const Span = styled.span`
   color: red;
 `;
 
-export { InstallContainer, Span };
+const NavbarContainer = styled.div`
+  height: ${({ viewing }) => (viewing) ? '265vh' : '200vh'};
+  width: 7vw;
+  border-right-style: solid;
+  border-right-width: 1px;
+  background-image: linear-gradient(to bottom, black, white);
+`;
+
+export { InstallContainer, Span, NavbarContainer };
